@@ -1,0 +1,123 @@
+# Privacy Policy
+
+Last updated: 8 October 2026
+
+This policy explains what personal data Sprichst ("the app", "we") handles when you learn German with it, why, who else receives it, how long it is kept, and what rights you have. We wrote it to be read, not to hide things. The short version:
+
+- We do not use analytics, advertising, tracking, or session-replay tools. Nobody records your screen or follows you around the web.
+- Your learning progress is stored in your account so it follows you between devices. Nothing else about you is collected on purpose.
+- The AI tutor runs on your own phone. If you choose, you can instead connect your own account with an AI provider (Groq, Google Gemini, OpenAI, Anthropic Claude, xAI Grok, Mistral, DeepSeek, OpenRouter or another OpenAI-compatible service) using your own key: your messages then go straight from your device to that provider. Sprichst runs no AI server and never sees those messages. (In a web browser the models cannot run, so the web version needs your AI key to use the tutor.)
+- Your voice is never stored by us. Recordings are turned into text and thrown away.
+- You can export or erase everything from inside the app.
+
+## 1. Who is responsible
+
+The controller of your personal data is:
+
+Sripathi Vangapandla
+Rudolf-Ernst-Weise-Str. 34, 06112 Halle (Saale), Germany
+Email: sripathiyadav66@gmail.com
+
+Contact for privacy questions: sripathiyadav66@gmail.com (we have not appointed a data protection officer, as none is required).
+
+We are based in the EU, so no EU representative is needed. We have not appointed a UK representative.
+
+## 2. What we handle, why, and on what legal basis
+
+For people in the EU, EEA, UK and Switzerland, "legal basis" means the grounds the GDPR requires. For everyone else it simply explains why we need the data.
+
+Account sign-in. When you press "Continue with Google", Google tells us your account identifier, email address and display name through Firebase Authentication. We use them to create and recognise your account. Legal basis: performing our contract with you (Art. 6(1)(b) GDPR).
+
+Your learning profile. This is what the app needs to teach you: your name or nickname, your level and goal, lessons completed, answers and accuracy per skill, mistakes to review, flashcard schedules, game scores, badges, daily quests, your streak, and your settings (appearance, voice, reminders, AI preferences). It is stored in Cloud Firestore under your account and cached on your device. Legal basis: performing our contract with you (Art. 6(1)(b)).
+
+Messages to the AI tutor. When you write or speak to the coach, the app gives the tutor your message, the last few messages of the current conversation (up to eight, kept only in memory and forgotten when you leave the coach screen) and a short summary of your learning state (your level, current lesson, weak skills, a few words you know and recent mistakes) so the answer fits you. On your phone this stays on your phone; with your own AI key your device sends it to the provider you chose (we do not receive it). This summary never contains your name or email. Legal basis: performing our contract with you (Art. 6(1)(b)); you choose whether to use the tutor.
+
+Your voice. If you use voice features, the microphone is used only while you record or while voice mode is on. The audio is turned into text on your device or, if you use your own AI key with a provider that offers speech recognition (Groq or OpenAI), by that provider's speech recognition, and then discarded by us (we never receive it). Recordings are not kept or used to train anything. Legal basis: performing our contract with you; the device asks for your permission first.
+
+Technical data when you use your own AI provider. We receive nothing: with your own key the request goes from your device to the provider, which sees your IP address and your request under your own agreement with it. We keep no server logs of it because there is no Sprichst server in the path.
+
+Your AI provider key. If you add one (one per provider), it is stored only in your device's secure storage (Keychain or Android Keystore; in a web browser, in the browser's protected storage). It is never sent to us, synced to your account, written to a log, or included in your learning profile. Remove it any time in Account → AI & voice, and revoke it in your provider's console.
+
+Downloads you ask for. If you download on-device AI models, your device connects to Hugging Face or GitHub, which can see your IP address and the file requested. This happens only when you tap download.
+
+Legal obligations. We may keep the information needed to answer legal claims, copyright notices and requests from authorities. Legal basis: a legal obligation or our legitimate interest in defending legal claims (Art. 6(1)(c) and (f)).
+
+What we do not do. We do not sell or rent your data. We do not share it for advertising. We do not build advertising profiles. We do not make decisions about you that have legal or similarly significant effects, and the app's lesson recommendations are suggestions you can ignore (so Art. 22 GDPR does not apply).
+
+## 3. What the web version contacts
+
+When you open the web app, your browser loads everything from our own server. The renderer, the fonts (Roboto, bundled) and the Firebase code are all served from the same address, so no third party learns that you visited. Nothing is sent to Google, a font service or a tracking service just because a page opened.
+
+Google's servers are contacted only when you act: pressing "Continue with Google" opens Google's sign-in and Firebase's sign-in frame, and signing in or saving progress talks to Firebase and Cloud Firestore. See section 5.
+
+## 4. Cookies and similar storage
+
+We use no advertising or analytics cookies. We store only what the app needs to work: your sign-in session and a copy of your progress and settings on your device, and, if you add one, your AI provider key in secure storage. This is "strictly necessary" storage, so no consent banner is needed. The details are in the Cookies and Storage notice.
+
+## 5. Who receives your data
+
+Google (Firebase Authentication and Cloud Firestore). Google Ireland Limited provides these services in the EEA and UK, and Google LLC in the United States, acting as our processor for your account and learning profile. The data is stored in the location europe-west3 (Frankfurt, Germany). Google's own privacy information applies to the Google account you sign in with.
+
+The AI provider you choose (only if you add your own key). Which one is up to you: Groq, Inc.; Google (Gemini); OpenAI; Anthropic; xAI; Mistral AI; DeepSeek; OpenRouter, Inc.; or a server of your choosing that speaks the OpenAI chat API (their companies and locations vary, and are mostly in the United States). You have your own account and agreement with that provider; it is not our processor and we do not receive, and cannot see, what you send. Your message, the last few messages of the conversation and the short learning summary go to it only when you choose "My own AI key", or in "Automatic" when a model is not yet downloaded and you have added a key. Read the provider's own privacy policy and data terms for what it keeps. If you choose "This phone only", nothing is sent to any provider. Sprichst asks before it moves a message to a different place: when your provider's allowance runs out, your key is rejected or you are offline, you are told and decide whether to answer on your phone.
+
+Hugging Face and GitHub. Receive your IP address when you download on-device models (see section 2).
+
+Authorities and advisers. We may disclose data if the law requires it, or to professional advisers under confidentiality.
+
+We do not use other analytics, advertising or tracking recipients.
+
+## 6. Transfers outside your country
+
+Google processes data in the United States and other countries, and so may the AI provider you choose if you use your own key (that transfer is made by you, under your agreement with the provider). Where the GDPR or UK GDPR applies, we rely on an adequacy decision (such as the EU-US Data Privacy Framework for certified recipients) or on the European Commission's Standard Contractual Clauses, together with the UK addendum where needed, and on additional safeguards. You can ask us for a copy of the safeguards at sripathiyadav66@gmail.com.
+
+## 7. How long we keep data
+
+Account and learning profile: until you erase them or delete your account. Erasing removes the documents from our database straight away; backups made by Google expire on Google's normal schedule.
+
+Voice recordings: never stored by us. Message text: we never receive it when you use your own AI key or your phone; the provider's retention is set by the provider (section 5).
+
+Copyright and legal-claim records: as long as needed for the claim, then deleted.
+
+On-device data stays until you reset progress, sign out and clear data, or uninstall the app.
+
+## 8. Your rights
+
+Depending on where you live, you have the right to access your data, correct it, erase it, restrict or object to its processing, receive it in a portable format, withdraw consent, and complain to a data protection authority. In the app you can:
+
+- Export everything: Account → Privacy & data → Export my data (copies your profile as JSON).
+- Reset learning progress: Account → Danger zone → Reset learning progress.
+- Delete your account and learning data: Account → Danger zone → Delete account.
+
+For anything else, write to sripathiyadav66@gmail.com. We will answer within one month (45 days in California, extendable where the law allows) and will not charge you except for clearly excessive requests. We may need to confirm that you are the account holder. See also "Your Rights" for the full list by region.
+
+## 9. Children
+
+Sprichst is for people aged 16 and over, or the age of digital consent in your country if that is lower, and in India for people aged 18 and over. Younger learners need a parent or guardian to set up the account and agree to this policy on their behalf. We do not knowingly collect data from children below those ages. If you think a child has given us data, contact sripathiyadav66@gmail.com and we will delete it. The app contains no advertising, no tracking and no public chat for anyone.
+
+## 10. Security
+
+We protect your data with measures suited to the risk: encrypted connections, per-account access rules in the database (no one else's account can read yours), strict validation of what is stored and sent, your AI provider key kept in secure storage on your device only, no secret keys of ours inside the app, and no raw database queries. See the Security summary. No system is perfectly secure; if a breach affects you, we will tell you and the authorities as the law requires.
+
+## 11. Regional information
+
+European Economic Area and United Kingdom. The controller is named in section 1. You can complain to your national data protection authority; in the UK that is the Information Commissioner's Office. Our lead supervisory authority is the Landesbeauftragter für den Datenschutz Sachsen-Anhalt (state data protection commissioner of Saxony-Anhalt), Magdeburg, Germany.
+
+Switzerland. We apply the revised Federal Act on Data Protection. You can contact the Federal Data Protection and Information Commissioner.
+
+California and other US states. We do not sell or share personal information, we do not use it for targeted advertising, and we do not use or disclose sensitive personal information beyond providing the service. We collect these categories: identifiers (account identifier, email, name), internet activity inside the app (your learning activity), audio (voice recordings, which are discarded after transcription), and inferences (your weak skills and recommendations). You may request to know, delete, correct and limit use of your data, and we will not discriminate against you for doing so. Send requests to sripathiyadav66@gmail.com; an authorised agent may act for you. If we deny a request, you can appeal by replying to that decision. We also honour browser Global Privacy Control signals, although we have nothing to opt you out of. Residents of Virginia, Colorado, Connecticut, Texas and other states with similar laws have comparable rights.
+
+Canada. We handle personal information in line with PIPEDA and, in Quebec, Law 25. You may ask to access or correct it and can complain to the Office of the Privacy Commissioner of Canada or your provincial regulator.
+
+Brazil. Under the LGPD you have the rights in Art. 18, including confirmation of processing, access, correction, anonymisation or deletion, portability and information about sharing. You can complain to the ANPD.
+
+India. We are preparing to meet the Digital Personal Data Protection Act, 2023 as its provisions take effect. You may ask to access, correct or erase your data, nominate someone to exercise your rights if you die or become incapacitated, and use our grievance contact, Sripathi Vangapandla, sripathiyadav66@gmail.com. If you are under 18, a parent or guardian must agree on your behalf.
+
+Australia, Japan, South Korea, South Africa and elsewhere. We apply the same protections to everyone and will respect your rights under local law, such as the Australian Privacy Principles, Japan's APPI, Korea's PIPA and South Africa's POPIA.
+
+## 12. Changes
+
+If we change this policy in a meaningful way we will tell you in the app before it applies, and show the date above. Earlier versions are available on request.
+
+## 13. Contact
+
+Sripathi Vangapandla, Rudolf-Ernst-Weise-Str. 34, 06112 Halle (Saale), Germany, sripathiyadav66@gmail.com.
