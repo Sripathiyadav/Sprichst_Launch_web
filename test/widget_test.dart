@@ -210,4 +210,23 @@ void main() {
     expect(controller().isAnimating, isFalse, reason: 'paused off screen');
     await tester.pumpAndSettle();
   });
+
+  testWidgets('a nav link lands on visible content, not a blank screen', (tester) async {
+    final settings = await _settings();
+    settings.setLocale(const Locale('en'));
+    await _pump(tester, settings, const Size(1440, 900));
+    final l = lookupAppLocalizations(const Locale('en'));
+    await tester.tap(find.text(l.navFaq).first);
+    // Step through the 600 ms scroll frame by frame, as a browser would.
+    for (var i = 0; i < 45; i++) {
+      await tester.pump(const Duration(milliseconds: 16));
+    }
+    final reveals = find.descendant(of: find.byType(FaqSection), matching: find.byType(Reveal));
+    expect(reveals, findsWidgets);
+    for (var i = 0; i < reveals.evaluate().length; i++) {
+      final fade = tester.widget<FadeTransition>(find.descendant(of: reveals.at(i), matching: find.byType(FadeTransition)).first);
+      expect(fade.opacity.value, 1, reason: 'FAQ item $i still hidden right after the jump');
+    }
+    await tester.pumpAndSettle();
+  });
 }

@@ -48,7 +48,7 @@ class _LandingPageState extends State<LandingPage> {
     if (MediaQuery.disableAnimationsOf(context)) {
       _scroll.jumpTo(offset);
     } else {
-      _scroll.animateTo(offset, duration: const Duration(milliseconds: 600), curve: Curves.easeInOutCubic);
+      Reveal.duringJump(() => _scroll.animateTo(offset, duration: const Duration(milliseconds: 600), curve: Curves.easeInOutCubic));
     }
   }
 

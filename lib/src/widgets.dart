@@ -52,6 +52,21 @@ class Reveal extends StatefulWidget {
   /// Longest wait in a cascade, so a big grid doesn't keep its last cards hidden.
   static const _maxQueue = 8;
 
+  // Nav-link jumps in progress; content passed or landed on shows at once.
+  static var _jumps = 0;
+
+  /// Runs a programmatic scroll (a nav link). Anything that comes into view
+  /// while it runs appears immediately instead of queueing a fade-in, so the
+  /// section you jump to isn't blank while the ones flown past animate.
+  static Future<void> duringJump(Future<void> Function() scroll) async {
+    _jumps++;
+    try {
+      await scroll();
+    } finally {
+      _jumps--;
+    }
+  }
+
   // Reveals triggered since the last frame; reset after each frame.
   static int _queued = 0;
   static bool _resetPending = false;
@@ -109,9 +124,9 @@ class _RevealState extends State<Reveal> with SingleTickerProviderStateMixin {
     // Start once the top edge is a little way into the viewport.
     if (top >= viewport.size.height - 60) return;
     _position?.removeListener(_check);
-    if (top + box.size.height < 0) {
-      // Jumped past it (a nav link): just show it, without holding up the
-      // cards that are actually on screen.
+    if (Reveal._jumps > 0 || top + box.size.height < 0) {
+      // Reached by a nav link, or scrolled past: just show it, without
+      // holding up the cards that are actually on screen.
       _controller.value = 1;
       return;
     }
