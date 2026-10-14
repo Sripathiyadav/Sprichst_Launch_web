@@ -523,6 +523,9 @@ class AppLocalizationsEl extends AppLocalizations {
   String get dlSoon => 'Έρχεται σύντομα';
 
   @override
+  String get dlAvailable => 'Διαθέσιμο τώρα';
+
+  @override
   String get dlAndroidBody => 'Google Play. Κινητά και tablet Android.';
 
   @override

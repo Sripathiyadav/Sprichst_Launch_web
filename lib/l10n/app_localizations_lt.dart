@@ -524,6 +524,9 @@ class AppLocalizationsLt extends AppLocalizations {
   String get dlSoon => 'Netrukus';
 
   @override
+  String get dlAvailable => 'Jau prieinama';
+
+  @override
   String get dlAndroidBody => 'Google Play. Android telefonai ir planšetės.';
 
   @override

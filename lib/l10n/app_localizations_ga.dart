@@ -524,6 +524,9 @@ class AppLocalizationsGa extends AppLocalizations {
   String get dlSoon => 'Ar fáil go luath';
 
   @override
+  String get dlAvailable => 'Ar fáil anois';
+
+  @override
   String get dlAndroidBody => 'Google Play. Fóin agus táibléid Android.';
 
   @override

@@ -522,6 +522,9 @@ class AppLocalizationsCs extends AppLocalizations {
   String get dlSoon => 'Již brzy';
 
   @override
+  String get dlAvailable => 'Dostupné nyní';
+
+  @override
   String get dlAndroidBody => 'Google Play. Telefony a tablety s Androidem.';
 
   @override

@@ -521,6 +521,9 @@ class AppLocalizationsSv extends AppLocalizations {
   String get dlSoon => 'Kommer snart';
 
   @override
+  String get dlAvailable => 'Tillgänglig nu';
+
+  @override
   String get dlAndroidBody => 'Google Play. Android-telefoner och surfplattor.';
 
   @override

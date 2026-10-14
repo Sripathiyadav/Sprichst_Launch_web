@@ -521,6 +521,9 @@ class AppLocalizationsHr extends AppLocalizations {
   String get dlSoon => 'Uskoro';
 
   @override
+  String get dlAvailable => 'Dostupno sada';
+
+  @override
   String get dlAndroidBody => 'Google Play. Android mobiteli i tableti.';
 
   @override

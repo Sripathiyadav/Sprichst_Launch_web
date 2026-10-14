@@ -12,6 +12,7 @@ const repoUrl = 'https://github.com/Sripathiyadav/Sprichst';
 const issuesUrl = 'https://github.com/Sripathiyadav/Sprichst/issues';
 const profileUrl = 'https://github.com/Sripathiyadav';
 const portfolioUrl = 'https://sripathiyadavportfolio.netlify.app';
+const webAppUrl = 'https://sprichst-74bed.web.app';
 const contactEmail = 'sripathiyadav66@gmail.com';
 
 Future<void> openUrl(String url) => launchUrl(Uri.parse(url), webOnlyWindowName: '_blank');

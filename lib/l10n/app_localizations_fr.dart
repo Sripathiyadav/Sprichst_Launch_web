@@ -523,6 +523,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get dlSoon => 'Bientôt disponible';
 
   @override
+  String get dlAvailable => 'Disponible';
+
+  @override
   String get dlAndroidBody => 'Google Play. Téléphones et tablettes Android.';
 
   @override

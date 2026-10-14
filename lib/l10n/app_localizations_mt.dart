@@ -522,6 +522,9 @@ class AppLocalizationsMt extends AppLocalizations {
   String get dlSoon => 'Dalwaqt';
 
   @override
+  String get dlAvailable => 'Disponibbli issa';
+
+  @override
   String get dlAndroidBody => 'Google Play. Mowbajls u tablets Android.';
 
   @override

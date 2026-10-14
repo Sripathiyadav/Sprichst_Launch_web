@@ -523,6 +523,9 @@ class AppLocalizationsHu extends AppLocalizations {
   String get dlSoon => 'Hamarosan';
 
   @override
+  String get dlAvailable => 'Már elérhető';
+
+  @override
   String get dlAndroidBody => 'Google Play. Androidos telefonok és táblagépek.';
 
   @override

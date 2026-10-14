@@ -520,6 +520,9 @@ class AppLocalizationsBg extends AppLocalizations {
   String get dlSoon => 'Очаквайте скоро';
 
   @override
+  String get dlAvailable => 'Вече е налично';
+
+  @override
   String get dlAndroidBody => 'Google Play. Телефони и таблети с Android.';
 
   @override

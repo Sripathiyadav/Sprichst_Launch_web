@@ -522,6 +522,9 @@ class AppLocalizationsEt extends AppLocalizations {
   String get dlSoon => 'Varsti tulekul';
 
   @override
+  String get dlAvailable => 'Saadaval nüüd';
+
+  @override
   String get dlAndroidBody => 'Google Play. Android-telefonid ja -tahvlid.';
 
   @override

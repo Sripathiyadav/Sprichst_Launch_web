@@ -724,11 +724,12 @@ class DownloadSection extends StatelessWidget {
     final l = AppLocalizations.of(context);
     final p = Palette.of(context);
     final cols = _cols(context, wide: 4, medium: 2);
-    final targets = [
-      ('Android', l.dlAndroidBody, 'Google Play'),
-      (l.dlIosTitle, l.dlIosBody, 'App Store'),
-      (l.dlWebTitle, l.dlWebBody, l.dlWebButton),
-      ('macOS', l.dlMacBody, 'Mac App Store'),
+    // (title, body, button, link once released)
+    final targets = <(String, String, String, String?)>[
+      ('Android', l.dlAndroidBody, 'Google Play', null),
+      (l.dlIosTitle, l.dlIosBody, 'App Store', null),
+      (l.dlWebTitle, l.dlWebBody, l.dlWebButton, webAppUrl),
+      ('macOS', l.dlMacBody, 'Mac App Store', null),
     ];
     return Section(
       top: false,
@@ -740,14 +741,17 @@ class DownloadSection extends StatelessWidget {
             gap: 16,
             reveal: true,
             children: [
-              for (final (title, body, button) in targets)
+              for (final (title, body, button, link) in targets)
                 SurfaceCard(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      decoration: BoxDecoration(color: p.sunken, borderRadius: BorderRadius.circular(99)),
-                      child: Text(context.isIndic ? l.dlSoon : context.upper(l.dlSoon),
-                          style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, letterSpacing: 0.5, color: p.muted)),
+                      decoration: BoxDecoration(color: link != null ? p.successSoft : p.sunken, borderRadius: BorderRadius.circular(99)),
+                      child: Text(
+                          link != null
+                              ? (context.isIndic ? l.dlAvailable : context.upper(l.dlAvailable))
+                              : (context.isIndic ? l.dlSoon : context.upper(l.dlSoon)),
+                          style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, letterSpacing: 0.5, color: link != null ? p.success : p.muted)),
                     ),
                     const SizedBox(height: 10),
                     Text(title, style: context.heading(20, weight: FontWeight.w600, height: 1.25, tracking: 0)),
@@ -755,7 +759,9 @@ class DownloadSection extends StatelessWidget {
                     Text(body, style: context.body(16, color: p.muted)),
                     const Spacer(),
                     const SizedBox(height: 16),
-                    PillButton(label: button, kind: PillKind.disabled, small: true),
+                    link != null
+                        ? PillButton(label: button, trailing: '↗', small: true, onPressed: () => openUrl(link))
+                        : PillButton(label: button, kind: PillKind.disabled, small: true),
                   ]),
                 ),
             ],

@@ -523,6 +523,9 @@ class AppLocalizationsLv extends AppLocalizations {
   String get dlSoon => 'Drīzumā';
 
   @override
+  String get dlAvailable => 'Pieejams tagad';
+
+  @override
   String get dlAndroidBody => 'Google Play. Android tālruņi un planšetes.';
 
   @override

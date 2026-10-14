@@ -521,6 +521,9 @@ class AppLocalizationsSl extends AppLocalizations {
   String get dlSoon => 'Kmalu';
 
   @override
+  String get dlAvailable => 'Na voljo zdaj';
+
+  @override
   String get dlAndroidBody => 'Google Play. Telefoni in tablice Android.';
 
   @override

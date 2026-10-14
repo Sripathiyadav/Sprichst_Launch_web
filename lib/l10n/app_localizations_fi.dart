@@ -523,6 +523,9 @@ class AppLocalizationsFi extends AppLocalizations {
   String get dlSoon => 'Tulossa pian';
 
   @override
+  String get dlAvailable => 'Saatavilla nyt';
+
+  @override
   String get dlAndroidBody => 'Google Play. Android-puhelimet ja -tabletit.';
 
   @override

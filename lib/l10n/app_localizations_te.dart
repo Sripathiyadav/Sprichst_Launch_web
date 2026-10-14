@@ -523,6 +523,9 @@ class AppLocalizationsTe extends AppLocalizations {
   String get dlSoon => 'త్వరలో వస్తోంది';
 
   @override
+  String get dlAvailable => 'ఇప్పుడు అందుబాటులో ఉంది';
+
+  @override
   String get dlAndroidBody => 'Google Play. Android ఫోన్‌లు మరియు టాబ్లెట్‌లు.';
 
   @override

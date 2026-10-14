@@ -522,6 +522,9 @@ class AppLocalizationsSk extends AppLocalizations {
   String get dlSoon => 'Už čoskoro';
 
   @override
+  String get dlAvailable => 'Dostupné teraz';
+
+  @override
   String get dlAndroidBody => 'Google Play. Telefóny a tablety s Androidom.';
 
   @override

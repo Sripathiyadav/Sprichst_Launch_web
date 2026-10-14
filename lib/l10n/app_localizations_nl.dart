@@ -522,6 +522,9 @@ class AppLocalizationsNl extends AppLocalizations {
   String get dlSoon => 'Binnenkort';
 
   @override
+  String get dlAvailable => 'Nu beschikbaar';
+
+  @override
   String get dlAndroidBody => 'Google Play. Android-telefoons en -tablets.';
 
   @override

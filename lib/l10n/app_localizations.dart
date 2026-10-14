@@ -1088,6 +1088,12 @@ abstract class AppLocalizations {
   /// **'Coming soon'**
   String get dlSoon;
 
+  /// No description provided for @dlAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Available now'**
+  String get dlAvailable;
+
   /// No description provided for @dlAndroidBody.
   ///
   /// In en, this message translates to:

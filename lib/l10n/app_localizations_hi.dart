@@ -523,6 +523,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get dlSoon => 'जल्द आ रहा है';
 
   @override
+  String get dlAvailable => 'अब उपलब्ध';
+
+  @override
   String get dlAndroidBody => 'Google Play. Android फ़ोन और टैबलेट।';
 
   @override
